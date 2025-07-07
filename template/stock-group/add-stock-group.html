@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h4 class="text-center">Add Stock Group</h4>
+
+<div class="card m-3 p-3">
+    <form method="post" action="{% url 'add_stock_group' %}">
+        {% csrf_token %}
+        <div class="form-group">
+        <input type="text" name="group" placeholder="Enter Stock Group Name" class="form-control">
+            </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+    </form>
+</div>
+
+
+{% endblock %}

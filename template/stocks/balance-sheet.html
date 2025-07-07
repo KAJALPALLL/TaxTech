@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Balance Sheet</h2>
+<ul>
+  {% for item in balance_sheet %}
+    <li>{{ item.name }} – ₹{{ item.amount }}</li>
+  {% empty %}
+    <li>No balance sheet data available.</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

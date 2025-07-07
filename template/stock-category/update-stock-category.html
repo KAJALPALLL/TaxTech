@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h4 class="text-center">Update Stock Category</h4>
+
+<div class="card p-3 m-3">
+    <form method="post" action="{% url 'update_stock_category' name %}">
+        {% csrf_token %}
+        <div class="form-group">
+        <input type="text" name="category" placeholder="Enter Stock Category Name" class="form-control" value="{{name}}">
+            </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+    </form>
+</div>
+
+
+{% endblock %}

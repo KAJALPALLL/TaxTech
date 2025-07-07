@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div style="float:right;">
+    <a href="{% url 'add_stock_category' %}">
+<button class="btn btn-primary">Add Stock Category</button>
+        </a>
+</div>
+<h3 class="text-center">Stock Category </h3>
+
+<div class="card m-3 p-3">
+    <table>
+
+            <tr>
+                <th>Stock Category Name</th>
+                <th>Actions</th>
+            </tr>
+
+
+            {% for num in names %}
+        <tr>
+            <td>{{num}}</td>
+            <td>
+                <a href="{% url 'update_stock_category' num %}">
+                <button class="btn btn-primary">Edit</button></a>
+                <a href="{% url 'delete_stock_category' num %}">
+                    <button class="btn btn-danger">Delete</button></a>
+            </td>
+        </tr>
+
+            {% endfor %}
+        </table>
+
+</div>
+
+{% endblock %}
+
+<!--first-->
+<!--f"{m['key']}"-->
+<!--&gt;>> f"{m[key]}"-->
+<!--&gt;>> "{m['key']}".format(m=m)-->
+<!--&gt;>> "{m[key]}".format(m=m)&lt;!&ndash;&ndash;&gt;-->
+<!--second-->
+<!--find(<key_name>).text-->
+<!--third-->
+<!--num['@'].Name-->

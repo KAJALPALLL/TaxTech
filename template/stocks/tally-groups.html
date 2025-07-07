@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3 class="text-center">Groups List </h3>
+
+<div class="card m-3 p-3">
+    <table>
+        <thead>
+            <tr>
+                <th>Tally Groups Name</th>
+                <th>Tally Groups Parent</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for num in groups %}
+                <tr>
+                    <td>{{num.name}}</td>
+                    <td>{{num.parent}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+
+

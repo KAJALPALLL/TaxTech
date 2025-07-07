@@ -1,0 +1,13 @@
+asgiref==3.8.1
+certifi==2025.6.15
+charset-normalizer==3.4.2
+Django==5.2.4
+idna==3.10
+lxml==6.0.0
+mysqlclient==2.2.7
+requests==2.32.4
+sqlparse==0.5.3
+tzdata==2025.2
+urllib3==2.5.0
+xmljson==0.2.1
+xmltodict==0.14.2
